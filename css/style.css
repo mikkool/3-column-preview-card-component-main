@@ -1,0 +1,108 @@
+@import url("./variables.css");
+@import url("./global.css");
+
+.main-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.cars {
+  max-height: 500px;
+  max-width: 920px;
+}
+
+.cars-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-content: center;
+}
+
+.cars-grid h1 {
+  font-family: 'Big Shoulders Display', cursive;
+  text-transform: uppercase;
+  font-size: 33px;
+  letter-spacing: 3px;
+}
+
+.cars-grid > div {
+  padding: 48px;
+}
+
+.cars-grid img, .cars-grid h1 {
+  margin-bottom: 40px;
+}
+
+.cars-grid .para-text {
+  margin-bottom: 85px;
+  font-size: 12px;
+  font-weight: 15px;
+  line-height: 25px;
+  font-weight: 400;
+}
+
+button {
+  background-color: var(--very-light-gray);
+  padding: 1rem 2rem;
+  border-radius: 1.5rem;
+  font-family: 'Lexend Deca', sans-serif;
+  cursor: pointer;
+  border: 2px solid var(--very-light-gray);
+}
+
+.sedan button:hover, .suv button:hover, .luxury button:hover {
+  color: #fff;
+  background-color: var(--transparent-white);
+  border: 2px solid var(--very-light-gray);
+  
+}
+
+.sedan button {
+  color: var(--bright-orange);
+}
+
+.suv button {
+  color: var(--dark-cyan)
+}
+
+.luxury button {
+  color: var(--very-dark-cyan)
+}
+  
+/* Sedan */
+.sedan {
+  background-color: var(--bright-orange);
+  width: 100%;
+  height: 100%;
+}
+
+/* SUV */
+.suv {
+  background-color: var(--dark-cyan);
+  width: 100%;
+  height: 100%;
+}
+
+/* Luxury */
+.luxury {
+  background-color: var(--very-dark-cyan);
+  width: 100%;
+  height: 100%;
+}
+
+@media only screen and (max-width: 375px){
+  .main-container {
+    min-height: 100%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .cars-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
